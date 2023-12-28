@@ -1,0 +1,24 @@
+{
+  "name": "ui",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@vueform/slider": "^2.1.10",
+    "vue": "^3.3.11",
+    "vue-slider-component": "^4.1.0-beta.7"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.5.2",
+    "gh-pages": "^6.1.1",
+    "sass": "^1.69.5",
+    "vite": "^5.0.10"
+  }
+}
