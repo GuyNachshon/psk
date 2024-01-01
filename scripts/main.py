@@ -63,8 +63,10 @@ def save_image(url, file_path):
 
         # Create final image with transparent background
         final = np.dstack((result, mask_gray))
-
-        cv2.imwrite(file_path.replace(".jeg", ".png"), final)
+        file_path = file_path.replace(".jpg", ".png").replace(".jpeg", ".png")
+        # save as png
+        final = cv2.cvtColor(final, cv2.COLOR_BGR2RGB)
+        cv2.imwrite(file_path, final)
 
 
 def setup():
@@ -99,8 +101,8 @@ def get_legos():
 
 
 def main():
-    if os.path.exists("legos.json"):
-        with open("legos.json", "r") as f:
+    if os.path.exists("__legos.json"):
+        with open("__legos.json", "r") as f:
             items = json.load(f)
     else:
         items = get_legos()
