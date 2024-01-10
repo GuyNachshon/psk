@@ -14,7 +14,8 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ```sh
 npm install
-```
+```![Uploading MicrosoftTeams-image (21).png…]()
+
 
 ### Compile and Hot-Reload for Development
 
